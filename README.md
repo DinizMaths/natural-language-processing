@@ -185,10 +185,12 @@ A pipeline is a sequence of steps that are executed to solve a problem. There ar
 
     Deploy the model. Can be a **Web Application**, **API**, **Mobile Application**, **Desktop Application**, etc.
 
-# 🎯 Projects
+# 🗂️ Folders
+
+[**📁 NLP With spaCy**](./nlp_with_spacy)
 
 <!--
-[**💻 Project 01**](./Project_01) - 
+[**💻 Project 01**](./Project_01) - NLP with spaCy
 
 [**💻 Project 02**](./Project_02) - 
 
