@@ -156,6 +156,32 @@ So, the result is a representation of the word in a vector space.
 - GloVe (Global Vectors for Word Representation)
 - BERT (Bidirectional Encoder Representations from Transformers)
 
+## 📝 NLP Pipelines
+
+A pipeline is a sequence of steps that are executed to solve a problem. There are many ways to build a NLP pipeline, but one of the most common is:
+
+1. **Data Collection**
+
+    Collect the data from the source. Can be a **Digital Document**, **Database**, **Cloud**, **OCR** (Optical Character Recognition), **Web Scraping**, etc.
+
+2. **Data Preprocessing**
+
+    Prepare the data to be used in the model. Using techniques like we saw on the section **📝 NLP Concepts**.
+
+3. **Text Representation**
+
+    Represent the text in a numerical way. Using techniques like we saw on the section **📝 NLP Word Embedding**.
+
+4. **Model Training**
+
+    - Train the model
+    - Evaluate the model
+    - Tunne the model
+
+5. **Deploy**
+
+    Deploy the model. Can be a **Web Application**, **API**, **Mobile Application**, **Desktop Application**, etc.
+
 # 🎯 Projects
 
 <!--
