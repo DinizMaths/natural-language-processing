@@ -77,9 +77,12 @@ Stemming is the process of reducing inflected (or sometimes derived) words to th
 
 Dependency Parsing is the process of analyzing the grammatical structure of a sentence based on the dependencies between the words in a sentence. For example, the sentence _"Our lives are controlled by algorithms"_ can be parsed as:
 
-<center>
-    <img src="./images/parsing.png" alt="Dependency Parsing" width="200"/>
-</center>
+&nbsp;
+&nbsp;
+<p align="center">
+  <img src="./images/parsing.png" alt="Dependency Parsing" width="200"/>
+</p>
+&nbsp;
 
 ### 💭 NGRAM
 
