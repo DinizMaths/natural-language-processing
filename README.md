@@ -87,9 +87,84 @@ NGRAM is a contiguous sequence of n items from a given sample of text or speech.
 
 Generally, we use **BIGRAMS** and **TRIGRAMS**, four or more grams are rare because they are too sparse.
 
+## 📝 NLP Word Embedding
+
+Computers are capable of processing only numbers, they don't handle very well with non-strucutred data like text. So, we need to convert text into numbers, non-structured data into structured data. This process is called **Word Embedding**.
+
+Word Embedding is the collective name for a set of language modeling and feature learning techniques in NLP where words or phrases from the vocabulary are mapped to vectors of real numbers.
+
+### 💭 One-Hot Encoding
+
+One-Hot Encoding is a process of converting a sentence into a matrix of 0s and 1s. Each row of the matrix represents a word in the sentence, and each column represents a word in the vocabulary. For example, the sentence _"Our lives are controlled by algorithms"_ can be encoded as:
+
+|            | algorithms | are | by | Our | controlled | lives |
+| ---------- | ---------- | --- | -- | --- | ---------- | ----- |
+| Our        | 0          | 0   | 0  | 1   | 0          | 0     |
+| lives      | 0          | 0   | 0  | 0   | 0          | 1     |
+| are        | 0          | 1   | 0  | 0   | 0          | 0     |
+| controlled | 0          | 0   | 0  | 0   | 1          | 0     |
+| by         | 0          | 0   | 1  | 0   | 0          | 0     |
+| algorithms | 1          | 0   | 0  | 0   | 0          | 0     |
+
+One of the highest problems of One-Hot Encoding is the **sparsity**. The matrix is very sparse, because the number of words in the vocabulary is much higher than the number of words in a sentence.
+
+### 💭 TF-IDF (Term Frequency - Inverse Document Frequency)
+
+TF-IDF is a process of representing a sentence by the frequency of the words. In a juridical process, for example, the words _"process"_ and _"law"_ are more frequent than the words _"banana"_ and _"pineapple"_. So, the words _"process"_ and _"law"_ will have a higher **weight** than the words _"banana"_ and _"pineapple"_.
+
+In a scenario that we have to choose what process is of a ambiental área:
+- Document 01: The word _"ambiental"_ appears 0 times.
+- Document 02: The word _"ambiental"_ appears 3 times.
+- Document 03: The word _"ambiental"_ appears 9 times.
+
+We have two ways to calculate the weight of the word _"ambiental"_:
+- TF(_"ambiental"_) = (Number of times that _"ambiental"_ appears in the document) / (Number of words in the document)
+- TF(_"ambiental"_) = (Number of times that _"ambiental"_ appears in the document) / (Number of times that the most frequent word appears in the document)
+
+Supose we choose the second way and in all documents the most frequent word appears 10 times. Now, the IDF(_"ambiental"_) is calculated as:
+
+- [Smooth IDF = True] IDF(_"ambiental"_) = $ln\left(\frac{1 + \text{Number of documents}}{1 + \text{Number of documents that ambiental appears}}\right ) + 1$
+- [Smooth IDF = False] IDF(_"ambiental"_) = $ln\left(\frac{\text{Number of documents}}{\text{Number of documents that ambiental appears}}\right ) + 1$
+
+Supose we choose the second way. Now, the TF-IDF(_"ambiental"_) is calculated as:
+
+|             | TF         | IDF             | TF-IDF          |
+| ----------- | ---------- | --------------- | --------------- |
+| Document 01 | 0/10 = 0.0 | ln(3/2) = 1.405 | TF * IDF = 0.00 |
+| Document 02 | 3/10 = 0.3 | ln(3/2) = 1.405 | TF * IDF = 0.42 |
+| Document 03 | 9/10 = 0.9 | ln(3/2) = 1.405 | TF * IDF = 1.26 |
+
+So, the term _"ambiental"_ has more associated to the document 03.
+
+### 💭 Word2Vec
+
+By a process of training, produces a vector that represents the relation between the words. There are two main ways:
+
+- CBOW (Continuous Bag of Words)
+
+    Predict a central word based on the context.
+
+- Skip-Gram
+
+    Predict the context based on a central word.
+
+So, the result is a representation of the word in a vector space.
+
+### 💭 Other Ways
+
+- FastText
+- GloVe (Global Vectors for Word Representation)
+- BERT (Bidirectional Encoder Representations from Transformers)
+
 # 🎯 Projects
 
-[**💻 Project 01 - Text Classification**](./Project_01)
+<!--
+[**💻 Project 01**](./Project_01) - 
+
+[**💻 Project 02**](./Project_02) - 
+
+[**💻 Project 03**](./Project_03) - 
+-->
 
 # 📦 Instalation
 
@@ -116,4 +191,6 @@ pip install -r requirements.txt
 # 📚 References
 
 [**🌐 Formação Processamento de Linguagem Natural: NLP [2023]**](https://www.udemy.com/course/formacao-processamento-de-linguagem-natural-nlp/)
+
+[**🌐 TF-IDF — algoritmo de recomendação**](https://medium.com/data-hackers/tf-idf-algoritmo-de-recomendação-6c3cbd55e439)
 
