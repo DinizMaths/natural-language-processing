@@ -4,7 +4,7 @@ This repository contains my studies about **Natural Language Processing (NLP)**.
 
 My name is **Matheus Diniz**, and I am a student at Universidade Federal do Rio Grande do Norte (UFRN). If you want to know more about me, check out:
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/dinizmaths)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dinizmaths)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DinizMaths)
 
 ## 📝 What is NLP?
@@ -187,15 +187,8 @@ A pipeline is a sequence of steps that are executed to solve a problem. There ar
 
 # 🗂️ Folders
 
-[**📁 NLP With spaCy**](./nlp_with_spacy)
+[**💻 NLP With spaCy**](./nlp_with_spacy)
 
-<!--
-[**💻 Project 01**](./Project_01) - NLP with spaCy
-
-[**💻 Project 02**](./Project_02) - 
-
-[**💻 Project 03**](./Project_03) - 
--->
 
 # 📦 Instalation
 
@@ -218,10 +211,8 @@ cd Project_01
 pip install -r requirements.txt
 ```
 
-
 # 📚 References
 
 [**🌐 Formação Processamento de Linguagem Natural: NLP [2023]**](https://www.udemy.com/course/formacao-processamento-de-linguagem-natural-nlp/)
 
 [**🌐 TF-IDF — algoritmo de recomendação**](https://medium.com/data-hackers/tf-idf-algoritmo-de-recomendação-6c3cbd55e439)
-
