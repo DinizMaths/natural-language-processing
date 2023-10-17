@@ -198,7 +198,7 @@ To clone this repository, use:
 git clone https://github.com/DinizMaths/natural-language-processing.git
 ```
 
-Each project has its own dependencies. To install them, cahnge to the project directory and use:
+Each project has its own dependencies. To install them (I recommend using a virtual environment), change to the project directory and use:
 
 ```bash
 pip install -r requirements.txt
@@ -207,7 +207,7 @@ pip install -r requirements.txt
 Example:
 
 ```bash
-cd Project_01
+cd nlp_with_spacy
 pip install -r requirements.txt
 ```
 
