@@ -188,7 +188,9 @@ A pipeline is a sequence of steps that are executed to solve a problem. There ar
 # 🗂️ Folders
 
 [**💻 NLP With spaCy**](./nlp_with_spacy/)
+
 [**💻 NLP With NLTK**](./nlp_with_nltk/)
+
 [**💻 Machine Learning and Deep Learning for NLP**](./Machine_Learning_and_Deep_Learning_for_NLP/)
 
 
